@@ -1,24 +1,23 @@
-import logo from './logo.svg';
+import AdminRoutes from "./routes/AdminRoutes";
+import UserRoutes from "./routes/UserRoutes";
+import Aos from "aos";
+import 'aos/dist/aos.css';
 import './App.css';
+import { useEffect } from "react";
+import { Routes } from "react-router-dom";
 
 function App() {
+  useEffect(() => {
+    Aos.init()
+  }, [])
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Routes>
+        {AdminRoutes}
+        {UserRoutes}
+      </Routes>
+    </>
   );
 }
 

@@ -1,0 +1,11 @@
+.top-info {
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 8px;
+
+    height: 120px;
+}
+
